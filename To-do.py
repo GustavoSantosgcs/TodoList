@@ -1,6 +1,7 @@
 # Atividade To-do list
 
-import json, os
+import json
+import os
 
 ARQUIVO = "tarefas.json"
 tarefas: list[dict] = []
@@ -28,7 +29,7 @@ def proximo_id():
     return max((i["id"] for i in tarefas), default=0) + 1
 
 
-# ---------- utilidades ----------
+# Utilidades 
 def listar():
     if not tarefas:
         print("\n📭  Nenhuma tarefa cadastrada.\n")
@@ -40,7 +41,7 @@ def listar():
     print("-" * 60 + "\n")
 
 
-def input_nao_vazio(msg: str):
+def input_nao_vazio(msg):
     entrada = input(msg).strip()
     while not entrada:
         entrada = input("Entrada vazia. Tente novamente: ").strip()
@@ -51,7 +52,7 @@ def contar_exec():
     return sum(i["status"] == "executando" for i in tarefas)
 
 
-# ---------- operações ----------
+#  Operações 
 def adicionar():
     while True:
         nome = input_nao_vazio("Nome da tarefa (máx. 80 caracteres): ")
@@ -125,7 +126,7 @@ def done_ou_excluir():
         print("⚠️  Opção cancelada.\n")
 
 
-# ---------- programa principal ----------
+# Menu principal 
 def main():
     carregar()
 
@@ -152,7 +153,7 @@ def main():
             case "4":
                 listar()
             case "0":
-                print("👋  Até mais!")
+                print("\n👋  Até mais!")
                 break
             case _:
                 print("Opção inválida.\n")
