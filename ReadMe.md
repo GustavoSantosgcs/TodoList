@@ -93,11 +93,10 @@ Nome da tarefa (máx. 80 caracteres): Estudar algoritmos
 
 ## 🌱 **Melhorias Futuras (Backlog)**
 
-- 🖥️ Interface gráfica com **Tkinter** ou **CustomTkinter**  
+- 🖥️ Interface gráfica com **CustomTkinter**  
 - 🔍 Filtro de busca por palavra-chave / status  
 - 🗂️ Tags e categorias personalizadas  
 - ⏰ Notificações de prazo (deadline)  
-- ☁️ Sincronização com GitHub Gists ou nuvem  
 
 ---
 
